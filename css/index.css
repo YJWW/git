@@ -1,0 +1,663 @@
+/* 默认样式修改----start */
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    color: #fff;
+    font-size: 14px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* 默认样式修改----end */
+
+/* 屏幕固定元素控制----start */
+
+.page {
+    width: 100%;
+    height: 100%;
+    background: #fcc;
+    position: relative;
+    perspective: 800px;
+}
+
+.page1 {
+    background: url("../images/page1_glow.png") no-repeat center top, linear-gradient(180deg, #1a0633, #3598d9);
+
+}
+
+
+.page1 .top {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    width: 600px;
+    height: 50px;
+    margin-left: -300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page1 .top a {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.page1 .dom {
+    width: 29px;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    bottom: 20px;
+    animation: page1Dom 1s linear infinite alternate;
+}
+
+@keyframes page1Dom {
+    from {
+        bottom: 20px
+    }
+    to {
+        bottom: 60px
+    }
+}
+
+.page1 .circle {
+    width: 680px;
+    height: 680px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -340px;
+    margin-top: -340px;
+    transform: rotateX(60deg);
+    animation: page1Circle 4s linear infinite;
+}
+
+@keyframes page1Circle {
+    from {
+        transform: rotateX(60deg) rotateZ(0)
+    }
+    to {
+        transform: rotateX(60deg) rotateZ(360deg)
+    }
+}
+
+.nav {
+    position: fixed;
+    top: 50%;
+    right: 4%;
+    height: 160px;
+    margin-top: -80px;
+}
+
+.nav li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-top: 15px;
+    background: #FFFFFF;
+    margin-bottom: 15px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.nav li.item {
+    opacity: 1;
+}
+
+.header {
+    width: 300px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+    box-sizing: border-box;
+}
+
+.header.noshow {
+    display: none;
+}
+
+.header img {
+    display: block;
+    margin-top: 5px;
+}
+
+
+.header a {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+    border: 1px solid #FFFFFF;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    bottom: 20px;
+    left: 0px;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-sizing: border-box;
+}
+
+.page1 .main {
+    position: absolute;
+    width: 580px;
+    height: 361px;
+    top: 50%;
+    left: 50%;
+    margin-top: -180px;
+    margin-left: -290px;
+    transform-style: preserve-3d;
+    transform: rotateY(60deg);
+    animation: page1Main 4s linear infinite;
+
+}
+
+@keyframes page1Main {
+    0% {
+        transform: scale(0.8) rotateY(0deg)
+    }
+    100% {
+        transform: scale(0.8) rotateY(-360deg)
+    }
+}
+
+.page1 .main li {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    backface-visibility: hidden;
+
+}
+
+.page1 .main li:nth-child(2) {
+    transform: translateZ(50px);
+}
+
+.page1 .main li:nth-child(3) {
+    transform: rotateY(180deg) translateZ(20px);
+}
+
+.page1 .main li:nth-child(4) {
+    transform: rotateY(180deg) translateZ(50px);
+}
+
+.page1 .main li:nth-child(5) {
+    transform: rotateY(180deg) translateZ(80px);
+}
+
+/*page3------------start*/
+
+.page3 {
+    background: url("../images/page3_glow.png") no-repeat center center, linear-gradient(180deg, #1a0c30, #44b447);
+}
+
+.page3 .page3Img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -65px;
+}
+
+.page3 .page3Round {
+    width: 680px;
+    height: 680px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -340px;
+    margin-top: -340px;
+    animation: page3Round 4s linear infinite;
+}
+
+@keyframes page3Round {
+    0% {
+        transform: scale(0.8) rotateZ(0deg)
+    }
+    100% {
+        transform: scale(0.8) rotateZ(360deg)
+    }
+}
+
+.page3 .page3Round li {
+    border: 1px solid #3598d9;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    transform: rotateX(75deg);
+    animation: page3Li 4s linear infinite;
+}
+
+@keyframes page3Li {
+    0% {
+        transform: rotateX(75deg) rotateZ(0deg)
+    }
+    100% {
+        transform: rotateX(75deg) rotateZ(360deg)
+    }
+}
+
+.page3Round li:nth-child(2) {
+    transform: rotateX(75deg) rotateY(60deg);
+    animation: page3Li2 4s linear infinite;
+}
+
+@keyframes page3Li2 {
+    0% {
+        transform: rotateX(75deg) rotateY(60deg) rotateZ(0deg)
+    }
+    100% {
+        transform: rotateX(75deg) rotateY(60deg) rotateZ(360deg)
+    }
+}
+
+.page3Round li:nth-child(3) {
+    transform: rotateX(75deg) rotateY(120deg);
+    animation: page3Li3 4s linear infinite;
+}
+
+@keyframes page3Li3 {
+    0% {
+        transform: rotateX(75deg) rotateY(120deg) rotateZ(0deg)
+    }
+    100% {
+        transform: rotateX(75deg) rotateY(120deg) rotateZ(360deg)
+    }
+}
+
+.page3 .title {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    margin-top: -75px;
+    transform: rotateX(-15deg) rotateY(-30deg) rotateZ(-26deg);
+    transition: all 1s;
+
+}
+
+.page3.page3title .title {
+    transform: rotateX(-15deg) rotateY(-30deg) rotateZ(-26deg) scale(2);
+}
+
+/*page3------end*/
+
+/*page4-------start*/
+.page4 {
+    background: url("../images/page4_glow.png") no-repeat center center, linear-gradient(180deg, #3A1307, #E08938);
+}
+
+.page4 .line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #FFFFFF;
+    top: 50%;
+    left: 0px;
+}
+
+.page4 .line2 {
+    top: 80%;
+}
+
+.page4 .line img {
+    position: absolute;
+    top: 0px;
+    left: -346px;
+    margin-top: -62px;
+    animation: page4Img 3s linear infinite;
+}
+
+@keyframes page4Img {
+    0% {
+        left: -346px
+    }
+    100% {
+        left: 100%
+    }
+}
+
+.page4 .page4Main {
+    width: 414px;
+    height: 414px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -207px;
+    margin-left: -207px;
+
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+
+.page4 .page4Main li {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    transform: rotateZ(50deg);
+}
+
+.page4 .page4Main li:nth-child(2), .page4Main li:nth-child(1), .page4Main li:nth-child(5) {
+    transform: rotateZ(40deg) translateZ(30px);
+    animation: page4Mainli2 3s linear infinite;
+}
+
+@keyframes page4Mainli2 {
+    from {
+        transform: rotateX(50deg) translateZ(30px) rotateZ(0)
+    }
+    to {
+        transform: rotateX(50deg) translateZ(30px) rotateZ(360deg)
+    }
+}
+
+.page4 .page4Main li:nth-child(3) {
+    transform: rotateX(50deg) translateZ(-20px);
+    animation: page4Mainli3 3s linear infinite;
+}
+
+@keyframes page4Mainli3 {
+    from {
+        transform: rotateX(50deg) translateZ(-20px) rotateZ(0)
+    }
+    to {
+        transform: rotateX(50deg) translateZ(-20px) rotateZ(360deg)
+    }
+}
+
+.page4 .page4Main li:nth-child(4) {
+    transform: rotateX(50deg) translateZ(-30px);
+    animation: page4Mainli4 3s linear infinite;
+}
+
+@keyframes page4Mainli4 {
+    from {
+        transform: rotateX(50deg) translateZ(-30px) rotateZ(0)
+    }
+    to {
+        transform: rotateX(50deg) translateZ(-30px) rotateZ(360deg)
+    }
+}
+
+.page4 .text {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    margin-top: -30px;
+    font-size: 16px;
+    transition: all 1s;
+}
+
+.page4 .page4title {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    margin-top: -78px;
+    transition: all 1s;
+}
+
+
+/*page4----------------start*/
+
+.page2 {
+    background: url("../images/page2_glow.png") no-repeat right center, linear-gradient(180deg, #222934, #41A343);
+
+}
+
+.page2 .linellae {
+    width: 100%;
+    height: 2px;
+    background: #85DE0F;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    z-index: 2;
+}
+
+.page2 .lineglow {
+    width: 346px;
+    height: 123px;
+    position: absolute;
+    top: 50%;
+    margin-top: -62px;
+    left: -346px;
+    animation: lineglow 3s linear infinite;
+    z-index: 1;
+}
+
+@keyframes lineglow {
+    0% {
+        left: -346px
+    }
+    100% {
+        left: 100%
+    }
+}
+
+.page2 .linellae .linellaeZi {
+    width: 355px;
+    height: 132px;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    margin-top: -46px;
+}
+
+.page2 .anim {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -175px;
+    width: 350px;
+    height: 350px;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.page2 .anim ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page2 .anim ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page2 ul li:nth-child(4) {
+    margin-left: -170px;
+    animation: page2Li 3s linear infinite;
+}
+
+@keyframes page2Li {
+    0% {
+        transform: rotateZ(0deg)
+    }
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+
+.page2 ul li:nth-child(3) {
+    left: -10px;
+    animation: page2Li 3s linear infinite;
+}
+
+.page2 ul li:nth-child(2) {
+    left: 150px;
+    animation: page2Li 3s linear infinite;
+}
+
+.page2 ul li:nth-child(1) {
+    left: 150px;
+}
+
+/*page5-------------------start*/
+
+.page5{
+    background: url("../images/page5_glow.png") no-repeat center center, linear-gradient(180deg, #2E1059, #CC4854);
+}
+
+.page5 .page5text{
+    position:absolute;
+    top: 50%;
+    left: 10%;
+    font-size: 16px;
+    transform: translateY(-50%);
+    transition: all 1s;
+}
+.page5 .page5title{
+    position:absolute;
+    top: 50%;
+    right: 6%;
+    margin-top: -62px;
+    transition: all 3s;
+
+}
+
+
+.page5 .page5bubble{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:600px;
+    height: 600px;
+    margin-top: -300px;
+    margin-left: -300px;
+}
+
+ .page5bubble ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+ .page5bubble li{
+     background: url("../images/page5_bubble_glow.png") no-repeat center center;
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-size: 100% 100%;
+     margin-top: -150px;
+     margin-left: -158px;
+     transition: all 0.8s;
+
+ }
+
+
+ .page5bubble ul li:nth-child(1){
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    width:305px;
+    height: 305px;
+
+}
+.page5bubble ul li:nth-child(2){
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    width:200px;
+    height: 200px;
+}
+
+.page5bubble ul li:nth-child(3){
+    position: absolute;
+    top: 94%;
+    left: 30%;
+    width:250px;
+    height: 250px;
+}
+
+.page5bubble ul li:nth-child(4){
+    position: absolute;
+    top: 90%;
+    left:94%;
+    width:180px;
+    height: 180px;
+}
+.page5bubble ul li:nth-child(5){
+    position: absolute;
+    top: 46%;
+    left:100%;
+    width:120px;
+    height: 120px;
+}
+.page5bubble ul li:nth-child(6){
+    position: absolute;
+    top: 56%;
+    left:116%;
+    width:80px;
+    height: 80px;
+}
+
+.page5.page3title ul li:nth-child(1){
+    left: -80%;
+}
+.page5.page3title ul li:nth-child(2){
+     top: -8%;
+     margin-left: -500px;
+ }
+.page5.page3title ul li:nth-child(3){
+    top:100%;
+    margin-left: -580px;
+
+}
+
+.page5.page3title ul li:nth-child(4){
+    top:126%;
+    margin-left:0px;
+
+}
+
+.page5.page3title ul li:nth-child(5){
+    top:4%;
+    margin-left:66px;
+
+}
+.page5.page3title ul li:nth-child(6){
+    top:46%;
+    margin-left:90px;
+}
+
+/*公共*/
+.page4.page3title .text, .page4.page3title .page4title, .page4.page3title .page4Main, .page2.page3title .anim{
+    transform: scale(3);
+
+}
+.page5.page3title .page5text, .page5.page3title .page5title{
+    transform: rotateY(-60rad);
+}
